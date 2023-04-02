@@ -75,7 +75,8 @@ class TestKaraokeBar(unittest.TestCase):
         self.room_1.check_in_guest(self.guest_1)
         self.room_1.check_in_guest(self.guest_2)
         self.guest_1.room_has_guests_favourite_song(self.room_1.songs)
+        print(self.room_1.songs)
         self.assertEqual(2, len(self.room_1.songs))
         self.assertEqual(520.00, self.karaoke_bar.till)
-        self.assertEqual("Whoo!", self.room_1.songs)
+        self.assertEqual("Whoo!", self.guest_1.room_has_guests_favourite_song(self.room_1.songs))
 

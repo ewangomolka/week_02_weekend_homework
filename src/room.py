@@ -22,6 +22,7 @@ class Room:
             return "Room over capacity"
         else:
             return "Room available"
+        
 
     # def room_has_guests_favourite_song(self, guest, song):
     #     for song in self.songs:
