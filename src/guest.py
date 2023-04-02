@@ -11,3 +11,9 @@ class Guest:
             return "can afford"
         elif self.wallet < room.price:
             return "can't afford"
+        
+    def room_has_guests_favourite_song(self, room):
+        if self.fav_song in room.songs:
+            return "Whoo!"
+        else:
+            return None

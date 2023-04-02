@@ -34,6 +34,13 @@ class TestRoom(unittest.TestCase):
         self.room_2.check_in_guest(self.guest_4)
         self.assertEqual(3, len(self.room_2.guests))
 
+    def test_room_capacity(self):
+        self.room_1.check_in_guest(self.guest_1)
+        self.room_1.check_in_guest(self.guest_2)
+        self.room_1.check_in_guest(self.guest_3)
+        check_capacity = self.room_1.check_room_capacity()
+        self.assertEqual("Room over capacity", check_capacity)
+
     def test_add_song_to_room(self):
         self.room_1.add_song(self.song_1)
         self.assertEqual(1, len(self.room_1.songs))

@@ -17,4 +17,17 @@ class Room:
     def add_song(self, song):
         self.songs.append(song)
 
+    def check_room_capacity(self):
+        if len(self.guests) > self.guest_capacity:
+            return "Room over capacity"
+        else:
+            return "Room available"
+
+    # def room_has_guests_favourite_song(self, guest, song):
+    #     for song in self.songs:
+    #         if song == guest.fav_song:
+    #             return "Whoo!"
+    #         else:
+    #             return None
+
     

@@ -33,3 +33,11 @@ class TestGuest(unittest.TestCase):
         guest_funds = self.guest_3.pay_entry(self.room_1)
         self.assertEqual("can't afford", guest_funds)
 
+    # def room_has_guests_favourite_song(self, guest, room):
+    #     for self.guest.fav_song in room.songs:
+    #         if guest.fav_song == room.songs:
+    #             return "Whoo!"
+    #         else:
+    #             return None
+
+
